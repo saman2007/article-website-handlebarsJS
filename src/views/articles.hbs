@@ -1,0 +1,6 @@
+<h1 class="title">articles</h1>
+<div class="articleContainer">
+    {{#each articles}}
+    {{> article src=this.cover alt=this.coverAlt title=this.title text=this.text date=this.date path=this.path}}
+    {{/each}}
+</div>

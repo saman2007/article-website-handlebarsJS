@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/template.css" />
+    {{#if home}}<link rel="stylesheet" href="/styles/index.css" />{{/if}}
+    {{#if articlesPage}}<link rel="stylesheet" href="/styles/index.css" />{{/if}}
+    {{#if notFound}}<link rel="stylesheet" href="/styles/404.css" />{{/if}}
+    {{#if aboutMe}}<link rel="stylesheet" href="/styles/aboutMe.css" />{{/if}}
+    {{#if articlePage}}<link rel="stylesheet" href="/styles/article.css" />{{/if}}
+    <title>{{title}}</title>
+</head>
+    <body>
+        <div class="contentsContainer">
+            <nav class="menu">
+                {{#each menu}}
+                <a href={{this.href}} class={{#if this.currentPage}}"menuItem menuItemSelect" {{else}}"menuItem" {{/if}}>{{this.title}}</a>
+                {{/each}} 
+            </nav>
+            {{{body}}}
+        </div>
+        <footer class="footer">
+            <p class="footerTxt">developed by saman</p>
+        </footer>
+    </body>
+</html>

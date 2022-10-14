@@ -1,0 +1,9 @@
+<h1 class="title">newest articles</h1>
+<div class="articleContainer">
+    {{#each articles}}
+    {{> article src=this.cover alt=this.coverAlt title=this.title text=this.text date=this.date path=this.path}}
+    {{/each}}
+    <div class="displayAllArticlesContainer">
+        <a href="/articles" class="seeAllArticles">see all articles</a>
+    </div>
+</div>
