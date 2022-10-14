@@ -43,6 +43,7 @@ server.use(aboutMeRoute);
 
 server.use((req, res) => {
   res.renderConfig.notFound = true;
+  res.renderConfig.title = "page not found"
 
   res.render("404", res.renderConfig);
 });
